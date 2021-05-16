@@ -40,10 +40,9 @@ function climbingLeaderboard(ranked, player) {
         if (playerScore < ranks[ranks.length - 1]) {
             result.push(ranks.length + 1);
         } else {
-            let founded = false;
             let tmp = [...ranks];
 
-            while (!founded) {
+            while (true) {
 
                 if (tmp.length === 1) {
                     result.push(ranks.indexOf(tmp[0]) + 1);
