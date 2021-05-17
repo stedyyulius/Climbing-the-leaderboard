@@ -31,7 +31,7 @@ The existing leaderboard, , is in descending order.
 The player's scores, , are in ascending order.
 */
 
-function climbingLeaderboard(ranked, player) {
+const climbingLeaderboard = (ranked, player) => {
     let result = [];
     let ranks = Array.from(new Set(ranked));
 
@@ -77,3 +77,6 @@ function climbingLeaderboard(ranked, player) {
     return result.reverse();
 
 }
+
+climbingLeaderboard([100, 100, 50, 40, 40, 20, 10], [5, 25, 50, 120]); // [6,4,2,1]
+climbingLeaderboard([100, 90, 90, 80, 75, 60], [50, 65, 77, 90, 102]); // [6,5,4,2,1]
